@@ -1,4 +1,4 @@
-# 🖥️ Simulador de Gerenciamento de Entrada e Saída (E/S) com Interrupção# 🖥️ Simulador de Gerenciamento de Entrada e Saída (E/S) com Interrupção
+ 🖥️ Simulador de Gerenciamento de Entrada e Saída (E/S) com Interrupção
 
 
 
