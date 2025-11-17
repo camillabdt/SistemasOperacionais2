@@ -6,7 +6,11 @@
 
 
 
-![I/O Management](https://media.giphy.com/media/l0HlQ7LRalQqdWfao/giphy.gif)Este repositório contém uma **simulação interativa** do gerenciamento de entrada e saída (E/S) em um sistema operacional. O simulador reproduz o comportamento de um processador lidando com interrupções de dispositivos periféricos (teclado, impressora e disco), demonstrando como o sistema operacional gerencia a execução de processos com armazenamento e recuperação de contexto.
+![I/O Management](https://media.giphy.com/media/l0HlQ7LRalQqdWfao/giphy.gif)
+
+
+
+Este repositório contém uma **simulação interativa** do gerenciamento de entrada e saída (E/S) em um sistema operacional. O simulador reproduz o comportamento de um processador lidando com interrupções de dispositivos periféricos (teclado, impressora e disco), demonstrando como o sistema operacional gerencia a execução de processos com armazenamento e recuperação de contexto.
 
 
 
@@ -390,30 +394,7 @@ SistemasOperacionais2/## 📁 Estrutura do Projeto
 
 
 
-## 🎓 Conceitos Implementados## 📚 Conceitos Implementados
-
-
-
-### 1. **Interrupções de Hardware** 🔔### 1. **Interrupções de Hardware**
-
-Simula como o processador é interrompido por dispositivos periféricos durante a execução.Simula como o processador é interrompido por dispositivos periféricos durante a execução de um processo.
-
-
-
-### 2. **Fila de Prioridades** 📊### 2. **Fila de Prioridades**
-
-Implementa uma fila que reordena automaticamente por importância, não por ordem de chegada.Implementa uma fila que reordena as interrupções conforme sua importância, não apenas por ordem de chegada.
-
-
-
-### 3. **Context Switch** 🔄### 3. **Armazenamento de Contexto**
-
-Demonstra como o SO salva e restaura o estado completo de um processo (PC e registradores).Demonstra como o SO salva o estado completo de um processo (PC e registradores) para posterior restauração.
-
-
-
-### 4. **Escalonamento** ⏱️### 4. **Restauração de Contexto**
-
+#
 Mostra como o sistema operacional gerencia múltiplas requisições simultâneas de diferentes prioridades.Mostra como o processo pode retomar exatamente de onde parou, com todos os valores preservados.
 
 
@@ -454,235 +435,10 @@ Mantém log detalhado para análise e debugging.Mantém registro detalhado de to
 
 ---
 
-## 📝 Exemplo de Log Exportado
-
-## 📊 Exemplo de Log Exportado
-
-```
-
-```SIMULADOR DE GERENCIAMENTO DE E/S COM INTERRUPÇÃO
-
-SIMULADOR DE GERENCIAMENTO DE E/S COM INTERRUPÇÃOGerado em: 17/11/2025, 14:30:45
-
-Gerado em: 17/11/2025, 14:30:45================================================================================
-
-================================================================================
-
-[Tempo 0] - Execução
-
-[Tempo 0] - ExecuçãoProcesso principal em execução.
-
-Processo principal em execução.
-
-────────────────────────────────────────────────────────────────────────────
-
-────────────────────────────────────────────────────────────────────────────
-
-[Tempo 6] - Interrupção
-
-[Tempo 6] - InterrupçãoArmazenando contexto do processo principal.
-
-Armazenando contexto do processo principal.Dispositivo: Teclado
-
-Dispositivo: TecladoPrioridade: Alta
-
-Prioridade: AltaContexto ANTES da interrupção:
-
-Contexto ANTES da interrupção:  - PC (Program Counter): 5
-
-  - PC (Program Counter): 5  - R1: 15
-
-  - R1: 15  - R2: 20
-
-  - R2: 20  - Status: Em Execução
-
-  - Status: Em ExecuçãoContexto DEPOIS da interrupção:
-
-Contexto DEPOIS da interrupção:  - PC (Program Counter): 5
-
-  - PC (Program Counter): 5  - R1: 15
-
-  - R1: 15  - R2: 20
-
-  - R2: 20  - Status: Interrompido
-
-  - Status: Interrompido
-
-────────────────────────────────────────────────────────────────────────────
-
-────────────────────────────────────────────────────────────────────────────
-
-[Tempo 7] - Interrupção
-
-[Tempo 8] - TratamentoIniciando tratamento da interrupção de Teclado.
-
-Tratando a interrupção de Teclado (Prio: Alta).Dispositivo: Teclado
-
-Dispositivo: TecladoPrioridade: Alta
-
-Prioridade: Alta
-
-────────────────────────────────────────────────────────────────────────────
-
-────────────────────────────────────────────────────────────────────────────
-
-```[Tempo 8] - Tratamento
-
-Tratando a interrupção de Teclado (Prio: Alta).
-
----Dispositivo: Teclado
-
-Prioridade: Alta
-
-## 🎯 Como Aprender com Este Projeto
-
-────────────────────────────────────────────────────────────────────────────
-
-Este simulador é uma excelente ferramenta para entender:```
-
-
-
-1. **O que é uma Interrupção?**---
-
-   - Como o hardware interrompe o processador
-
-   - Como o SO responde a eventos## 🔧 Funcionalidades Avançadas
-
-
-
-2. **O que é Context Switch?**### Edição de Registradores
-
-   - Como salvar o estado de um processoVocê pode modificar os valores de R1 e R2 em tempo de execução para testar diferentes cenários.
-
-   - Como restaurar exatamente de onde parou
-
-### Simulação Manual vs Automática
-
-3. **O que é Escalonamento?**- **Manual**: Clique em "Próximo Passo" para avançar a cada instrução
-
-   - Como gerenciar múltiplos eventos- **Automática**: Clique em "Rodar Contínuo" para execução contínua (800ms por passo)
-
-   - Como prioridades funcionam
-
-### Exportação de Dados
-
-4. **Como Funciona um SO Real?**Baixe o histórico completo em `.txt` para análise posterior ou para entregar como relatório.
-
-   - Gerenciamento de E/S em Linux/Windows
-
-   - Interrupções de hardware no dia a dia---
-
-
-
----## 📊 Visualização de Dados
-
-
-
-## 🐛 TroubleshootingA interface exibe:
-
-- **Estado do Processo**: PC, Registradores, Status
-
-### ❓ Não vejo interrupções aparecer?- **Fila Dinâmica**: Reordenação automática por prioridade
-
-- Clique em "Rodar Contínuo" ou "Próximo Passo" várias vezes- **Log em Tempo Real**: Todos os eventos aparecem conforme ocorrem
-
-- As interrupções têm 50% de chance por passo- **Contexto Salvo**: Informações do estado antes e depois de cada interrupção
-
-- Seja paciente! 😊
-
----
-
-### ❓ Os botões não funcionam?
-
-- Verifique se `npm run dev` está rodando## 🐛 Troubleshooting
-
-- Recarregue a página (F5 ou Ctrl+R)
-
-- Verifique o console do navegador (F12)### Não vejo interrupções aparecer?
-
-- Clique em "Rodar Contínuo" ou "Próximo Passo" várias vezes
-
-### ❓ Erro ao exportar log?- As interrupções têm 50% de chance de aparecer a cada passo
-
-- Certifique-se de ter pelo menos um evento- Paciência! Pode demorar um pouco
-
-- O botão fica desativado se o log está vazio
-
-### Os botões não funcionam?
-
-### ❓ Porta já está em uso?- Verifique se o servidor está rodando (`npm run dev`)
-
-- Use: `npm run dev -- --port 5174`- Recarregue a página (F5 ou Ctrl+R)
-
-
-
----### Erro ao exportar log?
-
-- Certifique-se de que tem pelo menos um evento no log
-
-## 📞 Contato e Suporte- O botão "Exportar Log" fica desativado se a lista está vazia
-
-
-
-**Disciplina:** Sistemas Operacionais  ---
-
-**Professor:** Aline Mello  
-
-**Email:** alinemello@unipampa.edu.br  ## 📞 Suporte
-
-**Instituição:** UNIPAMPA (Universidade Federal do Pampa)
-
-Para dúvidas sobre o trabalho, entre em contato com:
-
----- **Professor**: Aline Mello
-
-- **Email**: alinemello@unipampa.edu.br
-
-## 📄 Licença
-
----
 
 Este projeto foi desenvolvido como trabalho acadêmico para a disciplina de Sistemas Operacionais da UNIPAMPA.
-
-## 📄 Licença
-
----
-
-Este projeto foi desenvolvido como trabalho acadêmico para a disciplina de Sistemas Operacionais da UNIPAMPA.
-
-## 🚀 Próximos Passos (Melhorias Futuras)
-
----
-
-- [ ] Adicionar mais dispositivos de E/S
-
-- [ ] Implementar diferentes algoritmos de escalonamento## 🎓 Objetivo Educacional
-
-- [ ] Gráficos de desempenho em tempo real
-
-- [ ] Modo escuro/claroEste simulador foi criado para ajudar na compreensão de conceitos fundamentais de Sistemas Operacionais:
-
-- [ ] Testes unitários completos- Como o processador é interrompido
-
-- [ ] Deploy para demonstração online- Como o contexto é preservado
-
-- Como as prioridades funcionam
-
----- Como um SO gerencia múltiplos eventos simultâneos
-
-
-
-## ✍️ Desenvolvido porAproveite para aprender! 🚀
-
-
-
-Desenvolvido como **Trabalho Prático 3 (TP3)** da disciplina de Sistemas Operacionais.---
-
-
-
----**Última atualização:** 17 de novembro de 2025
 
 
 **Aproveite para aprender! 🎓**
 
-**Última atualização:** 17 de novembro de 2025
+
